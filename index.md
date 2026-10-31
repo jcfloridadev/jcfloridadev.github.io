@@ -2,9 +2,7 @@
 layout: default
 ---
 
-# Justin Carlo Florida
-
-## Computer Science | Software Engineering ePortfolio
+# Computer Science Capstone ePortfolio
 
 Welcome to my professional Computer Science Capstone ePortfolio at Southern New Hampshire University (SNHU).
 
