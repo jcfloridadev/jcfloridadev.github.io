@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Developer: Justin Carlo Florida
+    Course: CS 360 - Mobile Architecture and Programming
+    Project Three: Weight-Tracking App
+
+    This layout allows the user to review SMS permission information,
+    enter a phone number, and select notification preferences.
+-->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:fillViewport="true"
+    tools:context=".SmsSettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp">
+
+        <!-- Screen title establishes the primary visual focus. -->
+        <TextView
+            android:id="@+id/textViewSmsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sms_notifications"
+            android:textColor="#238C88"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewSmsSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/sms_subtitle"
+            android:textColor="#607D8B"
+            android:textSize="15sp" />
+
+        <!-- Explains why SMS access is requested. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#D9F2F0"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sms_permission"
+                android:textColor="#238C88"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/sms_permission_description"
+                android:textColor="#37474F"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewPermissionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/permission_not_requested"
+                android:textColor="#546E7A"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Enables or disables SMS notifications. -->
+        <Switch
+            android:id="@+id/switchEnableSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/enable_sms"
+            android:textColor="#37474F"
+            android:textSize="16sp" />
+
+        <!-- Phone number used for notifications. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/phone_number"
+            android:textColor="#37474F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            android:minHeight="52dp"
+            android:padding="12dp" />
+
+        <!-- Notification preference options. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="@string/notification_types"
+            android:textColor="#37474F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBoxGoalReached"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/goal_reached" />
+
+        <!-- Explains the denied-permission behavior required by the rubric. -->
+        <TextView
+            android:id="@+id/textViewSmsDeniedNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="#FFFFFF"
+            android:padding="14dp"
+            android:text="@string/sms_denied_notice"
+            android:textColor="#546E7A"
+            android:textSize="14sp" />
+
+        <!-- Requests runtime SMS permission or directs the user to App Settings when needed. -->
+        <Button
+            android:id="@+id/buttonRequestSmsPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#5A8F8C"
+            android:text="@string/request_sms_permission"
+            android:textColor="#FFFFFF" />
+
+        <!-- Saves the user's notification preferences. -->
+        <Button
+            android:id="@+id/buttonSaveSmsSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#3AAFA9"
+            android:text="@string/save_settings"
+            android:textColor="#FFFFFF" />
+
+        <!-- Returns to the dashboard without saving. -->
+        <Button
+            android:id="@+id/buttonCancelSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#78909C"
+            android:text="@string/cancel"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</ScrollView>
